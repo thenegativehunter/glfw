@@ -147,10 +147,10 @@ if (BUILD_SHARED_LIBS)
             set_target_properties(glfw PROPERTIES PREFIX "")
 
             # Add a suffix to the import library to avoid naming conflicts
-            set_target_properties(glfw PROPERTIES IMPORT_SUFFIX "dll.a")
+            set_target_properties(glfw PROPERTIES IMPORT_SUFFIX ".dll.a")
         else()
             # Add a suffix to the import library to avoid naming conflicts
-            set_target_properties(glfw PROPERTIES IMPORT_SUFFIX "dll.lib")
+            set_target_properties(glfw PROPERTIES IMPORT_SUFFIX ".dll.lib")
         endif()
 
         target_compile_definitions(glfw INTERFACE GLFW_DLL)
